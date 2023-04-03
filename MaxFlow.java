@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 class MaxFlow {
-    static final int V = 6; // Número de vértices en el grafo
+    static final int V = 5; // Número de vértices en el grafo
 
     // Retorna verdadero si hay un camino desde el nodo fuente 's'
     // hasta el nodo sumidero 't' en el grafo residual. También llena
@@ -69,15 +69,13 @@ class MaxFlow {
     // Función principal para probar el algoritmo de flujo máximo
     public static void main(String[] args) {
         int graph[][] = new int[][] {
-            {0, 16, 13, 0, 0, 0},
-            {0, 0, 10, 12, 0, 0},
-            {0, 4, 0, 0, 14, 0},
-            {0, 0, 9, 0, 0, 20},
-            {0, 0, 0, 7, 0, 4},
-            {0, 0, 0, 0, 0, 0}
+            {0, 20, 30, 10, 0},
+            {0, 0, 40, 0, 30},
+            {0, 0, 0, 10, 20},
+            {0, 0, 5, 0,20},
+            {0, 0, 0, 0, 0},
         };
         MaxFlow m = new MaxFlow();
-        System.out.println("El flujo máximo posible es " + m.fordFulkerson(graph, 0, 5));
+        System.out.println("El flujo máximo posible es " + m.fordFulkerson(graph, 0, 4));
     }
 }
-
